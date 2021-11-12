@@ -10,11 +10,11 @@
 
 // Richiesta numero chilometri da percorrere da parte dell'utente
 const numeroChilometri = parseInt( prompt("Inserisci il numero di chilometri che vuoi percorrere:") );
-console.log(numeroChilometri);
+// console.log(numeroChilometri);
 
 // Richiesta dell'età del passeggero da parte dell'utente
 const etàPasseggero = parseInt( prompt("Inserisci l'età del passeggero:") );
-console.log(etàPasseggero);
+// console.log(etàPasseggero);
 
 // Definisco la variabile che contiene il prezzo per chilometro
 const prezzoPerChilometro = 0.21;
