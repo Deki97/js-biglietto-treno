@@ -7,7 +7,6 @@
 
 
 // FASE DI INSERIMENTO DATI DA PARTE DELL'UTENTE
-
 // Richiesta numero chilometri da percorrere da parte dell'utente
 const numeroChilometri = parseInt( prompt("Inserisci il numero di chilometri che vuoi percorrere:") );
 // console.log(numeroChilometri);
@@ -19,7 +18,7 @@ const etàPasseggero = parseInt( prompt("Inserisci l'età del passeggero:") );
 // Definisco la variabile che contiene il prezzo per chilometro
 const prezzoPerChilometro = 0.21;
 
-// Definisco la variabile che conterrà il prezzo totale del biglietto
+// Definisco le variabili prezzoBigliettoIntero, sconto20, sconto40 e il prezzoFinaleBiglietto
 let prezzoBigliettoIntero;
 let sconto20;
 let sconto40;
