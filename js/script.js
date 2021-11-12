@@ -4,3 +4,51 @@
 // va applicato uno sconto del 20% per i minorenni
 // va applicato uno sconto del 40% per gli over 65.
 // L'output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo).
+
+
+// FASE DI INSERIMENTO DATI DA PARTE DELL'UTENTE
+
+// Richiesta numero chilometri da percorrere da parte dell'utente
+const numeroChilometri = parseInt( prompt("Inserisci il numero di chilometri che vuoi percorrere:") );
+console.log(numeroChilometri);
+
+// Richiesta dell'età del passeggero da parte dell'utente
+const etàPasseggero = parseInt( prompt("Inserisci l'età del passeggero:") );
+console.log(etàPasseggero);
+
+// Definisco la variabile che contiene il prezzo per chilometro
+const prezzoPerChilometro = 0.21;
+
+// Definisco la variabile che conterrà il prezzo totale del biglietto
+let prezzoBigliettoIntero;
+let sconto20;
+let sconto40;
+let prezzoFinaleBiglietto;
+
+
+// LOGICA
+// Se passeggero minorenne
+if ( etàPasseggero > 0 && etàPasseggero < 18) {
+    prezzoBigliettoIntero = (numeroChilometri * prezzoPerChilometro);
+    sconto20 = (prezzoBigliettoIntero * 20) / 100;
+    prezzoFinaleBiglietto = prezzoBigliettoIntero - sconto20;
+    // console.log(prezzoFinaleBiglietto);
+} 
+// Se passeggero over 65
+else if ( etàPasseggero > 65) {
+    prezzoBigliettoIntero = (numeroChilometri * prezzoPerChilometro);
+    sconto40 = (prezzoBigliettoIntero * 40) / 100;
+    prezzoFinaleBiglietto = prezzoBigliettoIntero - sconto40;
+    // console.log(prezzoFinaleBiglietto);
+} 
+// Se passeggero con età compresa tra 18 e 65 inclusi
+else {
+    prezzoBigliettoIntero = (numeroChilometri * prezzoPerChilometro);
+    prezzoFinaleBiglietto = prezzoBigliettoIntero;
+    // console.log(prezzoFinaleBiglietto);
+}
+
+
+
+// OUTPUT
+alert("Il prezzo totale in base ai chilometri da percorrere ed età del passeggero risulta: " + prezzoFinaleBiglietto.toFixed(2) + "€");
